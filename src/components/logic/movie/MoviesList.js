@@ -28,7 +28,6 @@ export class MoviesList extends Component {
                 onClick={this.handleMovie}
                 id={movie.imdbID}
                 title={movie.Title}
-                year={movie.Year}
                 poster={movie.Poster}
               />
             </div>

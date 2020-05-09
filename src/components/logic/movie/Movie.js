@@ -27,7 +27,6 @@ export class Movie extends PureComponent {
           <div className="media">
             <div className="media-content">
               <p className="title is-5 has-text-light">{title}</p>
-              <p className="subtitle is-6 has-text-grey-light">{year}</p>
             </div>
           </div>
         </div>
