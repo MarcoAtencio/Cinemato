@@ -301,6 +301,7 @@ nav {
 
   .Movie .Movie-item {
     display: block;
+    max-height: 100%;
   }
 
   .Movie .Movie-item .card-image {
