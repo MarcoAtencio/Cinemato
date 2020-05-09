@@ -1,38 +1,314 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/** loader */
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #f2f2f2;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.loader-movie {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.loader-wrapper .loader,
+.loader-movie .loade {
+  height: 150px;
+  width: 150px;
+}
+.loader-wrapper.is-active,
+.loader-movie.is-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.is-loading {
+  position: relative;
+}
+
+/** body */
+body {
+  background-image: url("/cine.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  background-attachment: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/** nav */
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.nav {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.box-nav {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  max-width: 100px;
+  border: none;
+  border-radius: 100%;
+}
+
+/** search*/
+.box-search {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.body:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: -webkit-linear-gradient(
+    rgba(17, 0, 0, 0.9),
+    rgba(10, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+  background: -moz-linear-gradient(
+    rgba(17, 0, 0, 0.9),
+    rgba(10, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+  background: -o-linear-gradient(
+    rgba(17, 0, 0, 0.9),
+    rgba(10, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+  background: linear-gradient(
+    rgba(17, 0, 0, 0.9),
+    rgba(10, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+/**  Welcome*/
+.box-welcome {
+  position: relative;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+/** container of movies*/
+.box-info {
+  display: flex;
+  justify-content: center;
+  min-height: 57vh;
+  width: 90%;
+  margin: auto;
+}
+
+.info {
+  width: 100%;
+  margin-bottom: 12px;
+  min-height: 70vh;
+}
+
+/** List movies*/
+.box-card {
+  padding: 30px;
+}
+
+.box-card:visited {
+  margin: none;
+}
+
+.box-card .card-image img {
+  transition: 4s;
+  border-radius: 2px;
+}
+
+.box-card .card-image :hover {
+  transition: 0.7s;
+
+  box-shadow: 2px 8px 40px 2px rgba(88, 0, 19, 0.7),
+    -1px 2px 20px 1px rgba(0, 0, 0, 0.6);
+}
+
+.box-card .card-content {
+  position: relative;
+}
+
+/** Card Movie*/
+.Movie {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.Movie .Movie-item {
+  padding-top: 15px;
+  position: relative;
+  display: inline-flex;
+  max-height: 450px;
+  max-width: 560px;
+}
+
+.Movie .Movie-item .image {
+  min-height: 320px;
+  max-height: 360px;
+  -moz-box-shadow: 0 1px 4px rgba(88, 0, 19, 0.7),
+    0 0 40px rgba(0, 0, 0, 0.4) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(88, 0, 19, 0.7),
+    0 0 40px rgba(0, 0, 0, 0.4) inset;
+  -o-box-shadow: 0 1px 4px rgba(88, 0, 19, 0.7),
+    0 0 40px rgba(0, 0, 0, 0.4) inset;
+  box-shadow: 0 1px 4px rgba(88, 0, 19, 0.7), 1 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.Movie .Movie-item .media-content {
+  max-width: 330px;
+}
+
+.Movie .Movie-item .subtitle {
+  padding-top: 4px;
+  font-style: italic;
+}
+
+/** btn back*/
+.box-back {
+  position: relative;
+}
+
+.btn-back {
+  margin-left: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 100%;
+}
+
+.infoMovie {
+  width: 100%;
+  display: inherit;
+}
+.infoMovie .box-back {
+  width: 10%;
+}
+
+.infoMovie .box-back .btn-back {
+  width: 40px;
+}
+
+.infoMovie .Movie {
+  width: 90%;
+}
+
+/** Error 404*/
+.box-404 {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.png-404 {
+  max-height: 300px;
+}
+
+/** Footer*/
+.box-footer {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  position: inherit;
+}
+
+.box-footer .footer {
+  padding: 0;
+  background-color: #fffff000;
+}
+
+.contacme {
+  position: relative;
+  color: ffffff9e;
+}
+
+.columns.is-multiline {
+  min-width: 100%;
+}
+
+@media (max-width: 880px) {
+  body {
+    background-image: url("/cine-movil.jpg");
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo {
+    max-width: 80px;
+    border-radius: 80%;
+    opacity: 0.5px;
+  }
+
+  .box-welcome {
+    text-align: center;
+    padding: 30px;
+  }
+
+  .box-card {
+    padding: 40px;
+  }
+
+  .Movie .Movie-item {
+    display: block;
+  }
+
+  .Movie .Movie-item .card-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .infoMovie .box-back .btn-back {
+    width: 30px;
   }
 }
