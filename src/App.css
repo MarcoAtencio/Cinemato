@@ -284,6 +284,7 @@ nav {
 @media (max-width: 880px) {
   body {
     background-image: url("/cine-movil.jpg");
+    transition: 2s;
   }
 
   .nav {
