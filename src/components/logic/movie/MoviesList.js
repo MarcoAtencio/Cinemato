@@ -22,9 +22,9 @@ export class MoviesList extends Component {
     console.log("movList", movies);
     return movies.length !== 0 ? (
       <div className="columns is-multiline ">
-        {movies.map((movie) => {
+        {movies.map((movie, index) => {
           return (
-            <div key={movie.imdbID} className="column is-3">
+            <div key={index} className="column is-3">
               <Movie
                 onClick={this.handleMovie}
                 id={movie.imdbID}
