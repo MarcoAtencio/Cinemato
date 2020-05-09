@@ -12,7 +12,10 @@ export class Body extends Component {
 
   handleResults = (results) => {
     this.setState({ results: [] });
-    this.setState({ results, loading: false });
+    this.setState({
+      results,
+      loading: false,
+    });
   };
 
   handleMovie = (movie) => {
