@@ -19,7 +19,6 @@ export class MoviesList extends Component {
 
   render() {
     const { movies } = this.props;
-    console.log("movList", movies);
     return movies.length !== 0 ? (
       <div className="columns is-multiline ">
         {movies.map((movie, index) => {

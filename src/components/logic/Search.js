@@ -20,7 +20,6 @@ export class Search extends Component {
       .then((res) => res.json())
       .then((results) => {
         const { Search = [] } = results;
-        console.log("search", Search);
         this.props.onResults(Search);
       });
   };

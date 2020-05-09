@@ -20,7 +20,6 @@ export class Body extends Component {
   };
 
   render() {
-    console.log("Body", this.state.results);
     return (
       <div className="info">
         <Search onResults={this.handleResults} />
