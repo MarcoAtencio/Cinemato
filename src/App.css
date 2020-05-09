@@ -283,7 +283,7 @@ nav {
 
 @media (max-width: 880px) {
   body {
-    background-image: url("/cine-movil.jpg");
+    background-image: url("/cine-movil.png");
     transition: 2s;
   }
 
