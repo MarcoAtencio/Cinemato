@@ -182,6 +182,10 @@ nav {
   position: relative;
 }
 
+.card-content .media .media-content {
+  text-align: center;
+}
+
 /** Card Movie*/
 .Movie {
   display: flex;
