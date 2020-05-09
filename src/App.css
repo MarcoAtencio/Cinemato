@@ -309,6 +309,7 @@ nav {
   }
 
   .infoMovie .box-back .btn-back {
+    margin-left: 0;
     width: 30px;
   }
 }
