@@ -325,4 +325,8 @@ nav {
     margin-left: 0;
     width: 30px;
   }
+
+  .Movie-item .card-content {
+    padding-left: 0px;
+  }
 }
