@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="box-footer">
         <div className="footer">
           <div className="contacme">
-            <span>Desarrollado por: Marco Atencio</span>
+            <span>Desarrollado por: Marco Atencio 2020</span>
           </div>
         </div>
       </div>

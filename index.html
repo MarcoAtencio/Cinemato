@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    var datos = ['2/4+2/4', '5/4+5/1'];
+    datos = datos.map((data) => {
+      d = data.split('+');
+      return d.map((t) => {
+        return t.split('/');
+      });
+    });
+
+    var result = datos[0][0][0];
+    console.log(result);
+    function add() {
+      if (n > 10 && n < 99) {
+        result = n
+          .toString()
+          .split('')
+          .map((n) => parseInt(n))
+          .reduce((x, y) => x + y);
+      } else {
+        return;
+      }
+      return result;
+    }
+  </script>
+</html>
