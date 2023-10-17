@@ -53,7 +53,7 @@
 
 /** body */
 body {
-  background-image: url("/cine.jpg");
+  background-image: url("./assets/images/cine.jpg");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -276,7 +276,7 @@ nav {
 
 @media (max-width: 880px) {
   body {
-    background-image: url("/cine-movil.jpg");
+    background-image: url("./assets/images/cine-movil.jpg");
   }
 
   .nav {
